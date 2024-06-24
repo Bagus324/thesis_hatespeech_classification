@@ -1,0 +1,5 @@
+skripsi-2-77c14-firebase-adminsdk-nmzhw-bbd8af59e7.json
+static/model/__pycache__/*
+static/model/checkpoints/*
+.dockerignore
+test.py

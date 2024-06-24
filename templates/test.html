@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  
+  <!-- Add Bootstrap JS and its dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <p id="myText">This is some sample text.</p>
+
+  <!-- Style the button with Bootstrap and add tooltip -->
+  <button class="btn btn-primary" onclick="myFunction()" id="copyButton" data-toggle="tooltip" data-placement="top" title="">
+    Copy text
+  </button>
+  
+  <script>
+  function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myText");
+  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.innerText)
+      .then(() => {
+        /* Show tooltip */
+        var copyButton = $('#copyButton');
+        copyButton.tooltip('dispose');
+        copyButton.attr('data-original-title', "Teks Berhasil disalin");
+        copyButton.tooltip('show');
+  
+        /* Hide tooltip after 3 seconds */
+        setTimeout(function() {
+          copyButton.tooltip('dispose');
+        }, 1000);
+      })
+      .catch(err => {
+        console.error('Could not copy text: ', err);
+      });
+  }
+  </script>
+  
+  </body>
+  </html>
+  

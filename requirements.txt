@@ -1,0 +1,13 @@
+numpy==1.22.4
+firebase_admin==6.5.0
+Flask==3.0.3
+Flask_Login==0.6.3
+pandas==1.5.3
+python-dotenv==1.0.1
+pytorch_lightning==2.2.4
+scikit_learn==1.5.0
+torch==1.13.1
+torchmetrics==0.11.1
+transformers==4.40.2
+Werkzeug==3.0.3
+gunicorn==22.0.0
